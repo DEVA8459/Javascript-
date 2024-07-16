@@ -1,9 +1,9 @@
 ## Basics of Arrays in javascript
- 1. arrays is a collection of items
+ 1. arrays is a **collection of items**
  2. arrays vs object--- 
-    1. object has key ,value pair and name of key is important 
-    2. but in arrays position(indices) of items is important
-    3. arrays is not a separtae type but its a sub type of object
+    1. object has **key value pair** and name of key is important 
+    2. but in **arrays position(indices) of items** is important
+    3. arrays is not a separtae type but its a **sub type of object**
 3. arrays doesnot haave keys value pair it just having single value or index value pair **in sq bracket** separated by commas
 ```js
  in object 
@@ -17,12 +17,12 @@ in Arrays
         let marks =[ 95,94,98,84]
 ```
 4. arrays is use **to collect same type of information**
-5. arrays is way of collecting items in single line or in linear manner
+5. arrays is way of collecting items in **single line or in linear manner**
  here we use square brackets
 6. array **can be of same data type and of diff data type**
 ```js ex---
-    let heroes = [ "ironman", "hulk", "thor", "batman" ];
-    let marks = [ 96, 75, 48, 83, 66 };
+    let heroes = [ "ironman", "hulk", "thor","batman"];
+    let marks = [ 96, 75, 48, 83, 66 ];
 ```
 7. anthor way to declare array
 ```js
@@ -36,14 +36,14 @@ in Arrays
     console.log(marks.length)
 ```
 
-8. in single arrays we can add diff type of information like boolean, string ,num etc but **generally we dont prefer it**
+8. in single arrays we can add **diff type of information** like boolean, string ,num etc but **generally we dont prefer it**
 ```js     
     let info = [ "rahul", 86, "Delhi" ];
 ```
 
 ## Array Indices
 1. arr[0], arr[l], arr[2] etc
-2. we also can change arrays value
+2. we also can **change arrays** value
 ```js
 let marks = [96, 75, 48, 83, 66]
 //to change 75 
@@ -59,7 +59,7 @@ arr[1]= 85 //-------- bus all set hai fir
  let heroes = [ "ironman", "hulk", "thor", "batman","antman","spiderman" ,"thanos" ];
 
  for(let i=0 ; i < heroes.length ; i++){
-    console.log(heroes[i]);
+    `your hero Name is :${heroes[i]}`
  }
 
  //but gnerally we use for-of loop
@@ -119,15 +119,41 @@ let allnewfooditems = [...foodltems, ...addfooditems ]
 console.log(allnewfooditems)
   
 ```
-## 4. pop( ) : delete end item & return the original
+## 4. pop( ) : delete end item & return that element
+```js
+ let heroes = [ "ironman", "hulk", "thor", "batman","antman","spiderman" ,"thanos" ];
+ let moreH=["drstrange" ,"widow"]
+    
+ console.log(heroes.pop()) //thanos
+
+```
 
 ## 5.toString( ) : converts array to string
+```js
+ let heroes = [ "ironman", "hulk", "thor", "batman","antman","spiderman" ,"thanos" ];
+let newHero= heroes.toString()
+
+console.log(newHero)
+
+```
 
 ## 6 unshift ( ) : add to start
+```js
+ let heroes = [ "ironman", "hulk", "thor", "batman","antman","spiderman" ,"thanos" ];
+heroes.unshift("captainAmerica")
 
-## 7 shift( ) : delete from start & return
+console.log(heroes)
 
-## 8 Slice( ) : returns a piece of the array
+```
+
+## 7 shift( ) : delete from start & return th eoriginal array
+```js
+ let heroes = [ "ironman", "hulk", "thor", "batman","antman","spiderman" ,"thanos" ];
+heroes.shift()
+
+console.log(heroes)
+```
+## 8 Slice( ) : returns a piece of the array ,doesent cahnge original array
 1. slice( startldx, endldx )
 ```js
 
@@ -136,7 +162,7 @@ let marvelHeroes= ["thor", "spiderman", "ironman","antman", "Dr. Strange"]
 console.log(marvelHeroes.slice( 1,3))
 // [ 'spiderman', 'ironman' ]
 ```
-## 8. Splice( ) : change original array (add, remove, replace)
+## 8. splice( ) : change original array (add, remove, replace) but it  return the deleted item
 1. splice( startldx, delCount, newE11... )
 ```js
 let arr=[1,2,3,4,5,6,7]
@@ -148,7 +174,7 @@ arr.splice(2, 0, 101);
         0---HOW MANY ELENET TO ADD OR DELETE 
         101---new no to add
 //Delete Element
-//arr.splice(3, 1);
+  arr.splice(3, 1);
 
 //Replace Element
 drr.splice(3, 1, 101)
@@ -164,6 +190,10 @@ let new_flat_a= Arr.flat(Infinity)
  console.log(new_flat_a)
 
 //here insteadd of Infinity we can use depth, i.e tillwher we want to flaten it 1 ,2 ,3 ,4 th array so if we diont know then use Infinity to flaten hole array 
+// 1 only upper array is removed nested not removed
+// 2  one nested array remove remove
+// infinity all nested arra remove
+
 ```
 ## 11. Array.isArray 
 1. to check anything is  aray or not 

@@ -209,4 +209,20 @@ while (index != -1){
 console.log(indices)
 ```
 
+## if want to claculate for every element of string
+```js
+const str3 ="i love javascript a"
+
+let str=Array.from(str3)
+console.log(str)
+const count = str.reduce((acc ,crr)=>{
+    if (crr in acc){
+        acc[crr]++
+    }else{acc[crr]=1}
+    return acc
+},{})
+console.log(count)
+```
+
+
 

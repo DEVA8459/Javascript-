@@ -3,6 +3,7 @@
 ## for Each
 1. The forEach method executes a **provided function** once for each array element.
 2. it takes a call back function 
+3. It **does not create a new array**, and it also **does not return any value.**
 ```js
 array.forEach(function(currentValue, index, array) {
     // code to be executed for each element
@@ -41,7 +42,7 @@ marvelHeroes.forEach((hero, index) => {
     4. Cannot be terminated early.
         1. bc No break or continue: Unlike traditional for loops, forEach does not support break or continue statements to exit or skip iterations early.
 2. for...of:
-    1. Best for any iterable object.
+    1. Best for any iterable object like array (dont confuse it with objects).
     2. Iterates directly over values.
     3. Simple and readable syntax.
     4. Can be terminated early.
@@ -53,7 +54,7 @@ marvelHeroes.forEach((hero, index) => {
 
 1. The `map` method **creates a new array** populated with the results of calling a provided function on every element in the calling array.
 2.  It **does not change the original** array.
-3. that why we need to store it in separate variable
+3. that why we need to **store it in separate variable**
 4. **takes a callback function**
 
 ```javascript
@@ -120,8 +121,9 @@ In terms of performance, both `map` and `forEach` have similar time complexities
   - Performing operations that involve DOM manipulation
 
 ## 3. reduce
+0. it reduces the arrays into single value
 1. The `reduce` method in JavaScript is used **to execute a reducer function on each element of an array**, resulting in a single output value.
-2. it return single output value no array return
+2. it **return single output** value no array return
 2. It is a powerful method that can be **used to accumulate values, transform data, or even flatten arrays**.
 
 ### Syntax
@@ -152,7 +154,7 @@ console.log(sum); // 10
 
 ```javascript
 const arrays = [[1, 2], [3, 4], [5, 6]];
-const flattened = arrays.reduce((accumulator, currentValue) => accumulator.concat(currentValue), []);
+const flattened = arrays.reduce((accumulator, cu9rrentValue) => accumulator.concat(currentValue), []);
 console.log(flattened); // [1, 2, 3, 4, 5, 6]
 ```
 
