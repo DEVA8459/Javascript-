@@ -154,7 +154,7 @@ console.log(sum); // 10
 
 ```javascript
 const arrays = [[1, 2], [3, 4], [5, 6]];
-const flattened = arrays.reduce((accumulator, cu9rrentValue) => accumulator.concat(currentValue), []);
+const flattened = arrays.reduce((accumulator, currentValue) => accumulator.concat(currentValue), []);
 console.log(flattened); // [1, 2, 3, 4, 5, 6]
 ```
 
@@ -287,7 +287,8 @@ console.log(uniqueNumbers); // [1, 2, 3, 4, 5]
 The `filter` method is a powerful and useful tool for creating new arrays with only the desired elements. It is often used to exclude unwanted values, filter objects based on properties, and generally refine arrays to meet specific criteria.
 
 ## find 
-The `find` method in JavaScript is used to locate the first element in an array that satisfies a provided testing function. Unlike `filter`, which returns an array of all elements that pass the test, `find` returns the value of the first element that passes the test, or `undefined` if no such element is found.
+1. The `find` method in JavaScript is **used to locate the first element in an array** that satisfies a provided testing function.
+2. Unlike `filter`, which returns an array of all elements that pass the test, **`find` returns the value of the first element that passes the test**, or **`undefined` if no** such element is found.
 
 ### Syntax
 
@@ -358,7 +359,9 @@ console.log(inStock); // { name: 'apple', quantity: 2 }
 The `find` method is useful for locating the first occurrence of an element in an array that matches a specific condition. It is a simple and effective way to retrieve a single element without having to loop through the entire array manually.
 
 ## includes
-The `includes` method in JavaScript is used to determine whether an array contains a specific element. It returns `true` if the array contains the element, and `false` otherwise. This method is case-sensitive when used with strings.
+1. The `includes` method in JavaScript is used to **determine whether an array contains a specific element.**
+2. It **returns `true` if the array contains the element, and `false`**otherwise. 
+2. This method is **case-sensitive when used with strings.**
 
 ### Syntax
 

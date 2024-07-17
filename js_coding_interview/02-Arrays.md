@@ -201,7 +201,7 @@ let new_flat_a= Arr.flat(Infinity)
 console.log(Array.isArray("DEVENDRA"))  //false because it isa string 
 ```
 ## 12.Array.from
-1. to convert anything into array
+1. to convert **string**  into array
 ```js
 console.log(Array.from("DEVENDRA")) 
 // ['D', 'E', 'V', 'E', 'N', 'D', 'R', 'A']
@@ -210,6 +210,11 @@ console.log(Array.from("DEVENDRA"))
 
 console.log(Array.from({name:"DEVENDRA"})) --//[]
 ```
+2. convert Number into Array
+```js
+let Arr=1234
 
+let Arr2=Array.from(String(Arr),Number)
+console.log(Arr2) //[ 1, 2, 3, 4 ]
 
-
+```
