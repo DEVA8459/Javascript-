@@ -235,7 +235,9 @@ const newArray = array.filter(callback(element, index, array));
 const numbers = [1, 2, 3, 4, 5, 6];
 const evenNumbers = numbers.filter(num => num % 2 === 0);
 console.log(evenNumbers); // [2, 4, 6]
+//for even num%2 !== 0
 ```
+
 
 ### Example: Filtering Objects by Property
 
@@ -287,7 +289,7 @@ console.log(uniqueNumbers); // [1, 2, 3, 4, 5]
 The `filter` method is a powerful and useful tool for creating new arrays with only the desired elements. It is often used to exclude unwanted values, filter objects based on properties, and generally refine arrays to meet specific criteria.
 
 ## find 
-1. The `find` method in JavaScript is **used to locate the first element in an array** that satisfies a provided testing function.
+1. The `find` method in JavaScript is **used to locate the first element in an array that satisfies a provided testing** function.
 2. Unlike `filter`, which returns an array of all elements that pass the test, **`find` returns the value of the first element that passes the test**, or **`undefined` if no** such element is found.
 
 ### Syntax

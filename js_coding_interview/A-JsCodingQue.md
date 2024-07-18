@@ -144,10 +144,23 @@ let x2 = 5;
 let y2 = 20;
 // semicolan ; is mandatory here
 
-[x2, y2] = [y2, x2];
+[x2, y2] = [y2, x2];// using array destructuring
 
 console.log(x2);
 console.log(y2);
+```
+
+## 7. Swap the value of two variable with the of temprory 3rd variable
+```js
+let x=2 ;
+let y=4;
+let temp=x;
+
+x=y
+y=temp
+
+console.log(`value of x is ${x}`)
+console.log(y)
 ```
 ## 8. write a programmae that removes duplicate charecters from string
 ```js
@@ -222,7 +235,9 @@ if (!isNaN(number) && number > 1) {
 }
 ```
 ## 12 .find the occurence of specific charactre in string 
+<!-- note -string also has index -->
 ```js
+// using for loop
 function countChar(str ,char){
     let count=0
    for (i=0 ;i<str.length;i++){
@@ -237,6 +252,25 @@ const targetChar="a"
 
 const result = countChar(string,targetChar)
 console.log(result)
+
+// using for of loop
+
+const string = "javascript is awsome";
+const ch ="a"
+
+const CountChar=(str ,char)=>{
+    
+    let count=0;
+    for (const chara of str){
+        if(chara === char){
+            count++;
+    }
+        
+    }
+    return count;
+}
+let result=CountChar(string ,ch);
+console.log(result);
 ```
 
 ## if want to claculate for every element of string
@@ -272,7 +306,7 @@ let AddNum=Arr2.reduce((acc,crv)=>{
 console.log(AddNum) //10
 
 // note- let Arr="1234" agar aisa diya ho to bhi same karne ka 
-// it alsouse full to put number into " " if number is very large other wose you get  0 0 0
+// it also usefull to put number into " " if number is very large other wise you get  0 0 0
 
 const num=123456789123484894998
 
@@ -285,7 +319,7 @@ console.log(num2)
 // to avoide such 
 
 const num="123456789123484894998"
-
+//String(num),Number)=converts no into array
 const num2=Array.from(String(num),Number)
 console.log(num2)
 
@@ -303,13 +337,15 @@ const a= 7
 const b= "7"
 console.log(a===b)//false
 ```
-## finding secong largest value
+## finding second largest value
 ```js
 // easy methode
 let arr =[12,11,10,5,113,112]
 let newArr=arr.sort((a,b)=>a-b)
 console.log(newArr)
 console.log(`2nd largest value is ${newArr[newArr.length-2]}` )
+
+// imp to note -console.log(max[max.length-2]) ye bhul raha hai tu bc bar bar
 
 ```
 ```js 
@@ -428,8 +464,8 @@ console.log(missingValue(arr))
 ## to check if plaindrom or not 
 ```js
 const palindrom =(word)=>{
-    word=word.toLocaleLowerCase()
-    return word=word.split("").reverse().join("")==word
+    LowerCase=word.toLocaleLowerCase()
+    return LowerCase.split("").reverse().join("")==word
     
 }
 console.log(palindrom("madam"))//true
@@ -437,3 +473,5 @@ console.log(palindrom("jvaaa"))//false
 console.log(palindrom("Madam"))//true
 
 ```
+
+## finding vowels from string
