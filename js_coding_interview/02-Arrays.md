@@ -119,7 +119,7 @@ let allnewfooditems = [...foodltems, ...addfooditems ]
 console.log(allnewfooditems)
   
 ```
-## 4. pop( ) : delete end item & return that element
+## 4 . pop( ) : delete end item & return that element
 ```js
  let heroes = [ "ironman", "hulk", "thor", "batman","antman","spiderman" ,"thanos" ];
  let moreH=["drstrange" ,"widow"]

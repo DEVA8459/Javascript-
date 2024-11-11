@@ -1,4 +1,6 @@
 ## 1.. Remove Duplicate element from array
+
+### 1. using indexOf and filter 
 ```js
 const array = [1, 4, 5, "Banana", 6, 1, 4, 4, 9, 3, "Banana"];
 
@@ -24,16 +26,39 @@ console.log(x);
 
 
 ```
-## finding unique using inbuilt methode
+### 2.. finding unique using inbuilt methode new Set
 ```js
 // can also find unnique using set 
 // got basic.js tolearn about set
 const array = [1, 4, 5, "Banana", 6, 1, 4, 4, 9, 3, "Banana"];
 
-const set =new Set(array)
-console.log(set)
+const set =new Set(array) //gives set array 
+
+// to convert set array to array objec we use form 
+const arr = Array.from(set)
+
+console.log(arr)
 
 ```
+### 3 = using for looop and index of 
+```js
+let num= [1 ,2,2,2 ,3,4,55,55,6,3,]
+
+const removeDuplicate =(arr)=>{
+    const uniq = []
+    
+    for (let i=0 ;i<arr.length ; i++){
+        if (uniq.indexOf(arr[i])== -1){
+            uniq.push(arr[i])
+        }
+    }
+    return uniq
+}
+
+console.log(removeDuplicate(num))
+
+```
+
 ## 2...Write a function to generate fibonaaci seriese
 ```js
 function fab(n) {
@@ -54,7 +79,7 @@ function fab(n) {
   for (let i = 2; i < n; i++) {
     let nxt = fabser[i - 1] + fabser[i - 2];
     fabser.push(nxt);
-  }
+  } 
   return fabser;
 }
 
@@ -64,11 +89,10 @@ let fbs = fab(no);
 console.log(fbs);
 ```
 
-## 3. reverse string with and without methode
+## 4. reverse string with and without methode
 
 ```js
 // with methode
-
 let str="java"
 
 const revstr=str.split("").reverse().join("")
@@ -82,22 +106,68 @@ let revStr = "";
 
 for (let i = str.length - 1; i >= 0; i--) {
   revStr += str[i];
+//   we cant use push here bc its string not array
 }
 
 console.log(revStr);
 ```
-##  4. sort number of array in dessending order
+## 5. sort number of array in dessending order
+
+### 5.1 using sort methode 
 ```js
 const numbers1 = [23, 34, 123, 43, 5, 77, 38, 2];
 
+
 console.log(numbers1.sort((num1, num2) => num2 - num1));
 ```
-## 5. sort number of array in assending order
+
+### 5.2 without using sort methode
+```js
+const numbers1 = [23, 34, 123, 43, 5, 77, 38, 2];
+
+const assending =(arr)=>{
+    for (let i=0 ; i< arr.length ; i++){
+        for (let j=0 ; j<arr.length-1-i ;j++){
+            if (arr[j] < arr[j+1]){
+                let temp =arr[j]
+                arr[j] =arr[j+1]
+                arr[j+1]=temp
+            }
+        }
+    }
+    return arr
+}
+
+console.log(assending(numbers1))
+```
+
+## 6. sort number of array in assending order
+
+### 6.1 using sort 
 ```js
 console.log(numbers1.sort((num1, num2) => num1 - num2));
 
 ``` 
-## 6. finding min and max value with inbuilt methode
+### 6.2 without using sort 
+```js 
+const numbers1 = [23, 34, 123, 43, 5, 77, 38, 2];
+
+const desending =(arr)=>{
+    for (let i=0 ; i< arr.length ; i++){
+        for (let j=0 ; j<arr.length-1-i ;j++){
+            if (arr[j] < arr[j+1]){
+                let temp =arr[j]
+                arr[j] =arr[j+1]
+                arr[j+1]=temp
+            }
+        }
+    }
+    return arr
+}
+
+console.log(desending(numbers1))
+```
+## 7. finding min and max value with inbuilt methode
 ```js
 const numbers = [23, 34, 123, 43, 5, 77, 38, 2];
 
@@ -138,7 +208,7 @@ const num2=num.sort((a,b)=>a-b)
 console.log("min elelment is",num2[0] ,"max element is ",num2[num2.length-1])
 
 ```
-## 7. Swap the value of two variable without the need of temprory 3rd variable
+## 8. Swap the value of two variable without the need of temprory 3rd variable
 ```js
 let x2 = 5;
 let y2 = 20;
@@ -149,8 +219,7 @@ let y2 = 20;
 console.log(x2);
 console.log(y2);
 ```
-
-## 7. Swap the value of two variable with the of temprory 3rd variable
+## 9. Swap the value of two variable with the of temprory 3rd variable
 ```js
 let x=2 ;
 let y=4;
@@ -162,12 +231,14 @@ y=temp
 console.log(`value of x is ${x}`)
 console.log(y)
 ```
-## 8. write a programmae that removes duplicate charecters from string
+## 10. write a programmae that removes duplicate charecters from string
 ```js
 function remDup(str) {
   const uniChar = new Set(str);
 //   using set to store unique data
 
+// form converts set object to array
+// join converts array to string by joining all char 
   const result = Array.from(uniChar).join(" ");
   return result;
 }
@@ -176,8 +247,11 @@ const inputString = "hello world";
 const result = remDup(inputString);
 console.log(result);
 ```
-## 9.  check weather number is even 
+## 11.  check weather number is even 
 ```js
+
+// short note n%i==0 for factoring 
+// n%2 === 0 for even number 
 let number = prompt("Enter a number:");
 
 number = parseInt(number);
@@ -193,7 +267,29 @@ if (!isNaN(number)) {
 }
 ```
 
-## 10. check if number is odd
+### 11.2 number is even also neglect negative number
+
+```js
+const num = [1,2,3,4,5,6,7,8,9,0,-2,-4]
+
+const even =(arr)=>{
+    const evenN=[]
+    
+    for(let i=0 ; i<arr.length ; i++){
+        if (arr[i] > 0){
+        if(arr[i]%2 === 0){
+            evenN.push(arr[i])
+        }}
+    }
+    return evenN
+}
+
+console.log(even(num))
+
+
+```
+
+## 12. check if number is odd
 ```js
 let number2 = prompt("Enter a number:");
 
@@ -209,7 +305,25 @@ if (!isNaN(number2)) {
     console.log("Please enter a valid number.");
 }
 ```
-## 11. check if number is prime number 
+## do check something amazing
+```js
+let arr =[1,2,3,4,5,6,7,8,9]
+let even = []
+let odd=[]
+for (let i=0 ;i< arr.length;i++){
+    // if i only write i in if else instead of   arr[i] it reverse the output of  even and odd do try please
+    if (arr[i] % 2 === 0 ){
+        even.push(arr[i])
+    }else{
+        odd.push(arr[i])
+    }
+}
+
+console.log(even)
+console.log(odd)
+
+```
+## 13. check if number is prime number 
 ```js
 let number = prompt("Enter a number:");
 
@@ -234,7 +348,36 @@ if (!isNaN(number) && number > 1) {
     console.log("Please enter a valid number greater than 1.");
 }
 ```
-## 12 .find the occurence of specific charactre in string 
+
+## if number is given 
+```js
+let str2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+function isPrime(num) {
+    if (num < 2) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function countPrimes(arr) {
+    let prime = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (isPrime(arr[i])) {
+            prime.push(arr[i]);
+        }
+    }
+    return prime;
+}
+
+console.log(countPrimes(str2));
+
+
+```
+## 14 .find the occurence of specific charactre in string 
 <!-- note -string also has index -->
 ```js
 // using for loop
@@ -273,7 +416,7 @@ let result=CountChar(string ,ch);
 console.log(result);
 ```
 
-## if want to claculate for every element of string
+## 15. if want to claculate for every element of string
 ```js
 const str3 ="i love javascript a"
 
@@ -288,7 +431,7 @@ const count = str.reduce((acc ,crr)=>{
 console.log(count)
 ```
 
-## Q :A number is given and asked about total of that number 
+## Q 16:A number is given and asked about total of that number 
 ```js
 let num=1234
 
@@ -329,7 +472,7 @@ console.log(num2)
 //   4, 8, 9, 4, 9, 9, 8
 // ]
 ```
-## == vs ===
+## 17. == vs ===
 1. == only check value
 2. === checks value as well as data type 
 ```js
@@ -337,7 +480,7 @@ const a= 7
 const b= "7"
 console.log(a===b)//false
 ```
-## finding second largest value
+## 18 finding second largest value
 ```js
 // easy methode
 let arr =[12,11,10,5,113,112]
@@ -382,7 +525,7 @@ console.log(secmax); // 112
 
 ```
 
-## finding a third largest 
+## 19 finding a third largest 
 ```js
 // easy methode
 let arr =[12,11,10,5,113,112]
@@ -413,7 +556,7 @@ console.log(thirdMax); // 12
 
 ```
 
-## findinng missing number in given integer of array of 1 to 10
+## 20 findinng missing number in given integer of array of 1 to 10
 ```js
 // if asked only to return those missing number
 const arr=[1,2,3,4,5,6,9,10]
@@ -461,12 +604,11 @@ console.log(missingValue(arr))
 
 ```
 
-## to check if plaindrom or not 
+## 21 to check if plaindrom or not 
 ```js
 const palindrom =(word)=>{
-    LowerCase=word.toLocaleLowerCase()
-    return LowerCase.split("").reverse().join("")==word
-    
+    const LowerCase=word.toLowerCase()
+    return LowerCase.split("").reverse().join("")==LowerCase
 }
 console.log(palindrom("madam"))//true
 console.log(palindrom("jvaaa"))//false
@@ -474,4 +616,4 @@ console.log(palindrom("Madam"))//true
 
 ```
 
-## finding vowels from string
+## 22 finding vowels from string

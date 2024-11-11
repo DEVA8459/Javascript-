@@ -280,8 +280,8 @@ console.log(uniqueNumbers); // [1, 2, 3, 4, 5]
 
 ### Important Points
 
-- **Immutability:** `filter` does not modify the original array but returns a new array with the elements that pass the test.
-- **Return Value:** The new array returned by `filter` only includes elements that make the callback function return `true`.
+- **Immutability:** `filter` does not modify the original array but **returns a new array** with the elements that pass the test.
+- **Return Value:** The new array returned by `filter` **only includes elements that make the callback function return `true`.**
 - **Callback Function:** The callback function should return a boolean value (`true` to keep the element, `false` to exclude it).
 
 ### Summary

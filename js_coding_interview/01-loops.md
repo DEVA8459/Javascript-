@@ -200,10 +200,10 @@ Reading: Book 4
 - **`for...in` loop**: Best for going through object properties.
 - **`for...of` loop**: Best for going through items in an array.
 
-If you have any questions or need more examples, feel free to ask!
 
 ## why for of not used in object
 1. The `for...of` loop is **not preferred** for objects because it is designed to iterate over iterable objects like arrays, strings, maps, and sets. 
+
 2. **Objects in JavaScript are not inherently iterable** in the same way arrays and other collection types are. Here's why `for...of` is not suitable for objects:
 
 ### 1. Objects Are Not Iterable

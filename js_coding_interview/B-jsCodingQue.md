@@ -41,7 +41,7 @@ if(num <= 0){
 
 ## 3. Making calculator
 1. here we are using parsefloat to convert number into string 
-2. otherwise js recurion is hapeen 
+2. otherwise js recursion is hapeen 
 ```js
 const num1=parseFloat(prompt("enter 1st number"))
 const operator=prompt("enter any one operator for Add + ,for subtract = -,for multiplication= * ,for devide = /")
@@ -63,6 +63,7 @@ if (operator== "+"){
 ```js
 var arr1= [2,9,6,8,4]
 var arr2=[4,8,6,9,2]
+
 const isArraySame=arr1.length==arr2.length && arr1.every((crr)=>{
     if(arr2.indexOf(crr)>-1){
         return (crr=[arr2.indexOf(crr)])
