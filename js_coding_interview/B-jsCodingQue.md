@@ -111,3 +111,23 @@ var arr2 =[4,8,6,9,12]
 console.log(unionArr (arr1 ,arr2))
 
 ```
+## 7. leap year
+```js
+// leap year programme 
+const leapYear=(year)=>{
+    if(isNaN(year)){
+        console.log("please enter a valid year ")
+        return 
+    }
+    if((year%4===0 && year&100 !== 0)|| year%400 ===0){
+        console.log(`${year} is a leap year` )
+    }else{
+        console.log(`${year} is not a leap year`)
+    }
+}
+
+let year=prompt('enter a year')
+
+console.log(leapYear(year))
+
+```
