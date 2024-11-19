@@ -249,3 +249,51 @@ document.getElementById("myDiv").addEventListener("click", myFunction, true);
 1. The removeEventListener() method removes event handlers that have been attached with the addEventListener() method:
     1. element.removeEventListener("mousemove", myFunction);
 
+## 16. DOM Collections
+1. The getElementsByTagName() method returns an HTMLCollection object.
+2. An HTMLCollection object is an **array-like list (collection)** of HTML elements.
+3.  The following code selects all <p> elements in a document:
+```js
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p>Hello World!</p>
+
+<p>Hello Norway!</p>
+
+<p id="demo"></p>
+
+<script>
+const myCollection = document.getElementsByTagName("p");
+
+document.getElementById("demo").innerHTML = "The innerHTML of the second paragraph is: " + myCollection[1].innerHTML;
+
+</script>
+
+</body>
+</html>
+
+```
+4. The elements in the collection can be accessed by an index number.
+5. To access the second <p> element you can write:
+    1. myCollection[1]
+
+6. HTML HTMLCollection Length
+    1. The length property is useful when **you want to loop through** the elements in a collection:
+    2. Change the text color of all <p> elements:
+    3. ```js
+         const myCollection = document.getElementsByTagName("p");
+        for (let i = 0; i < myCollection.length; i++) {
+        myCollection[i].style.color = "red";
+        }
+        ```
+    4. An HTMLCollection is NOT an array!
+    5. An HTMLCollection may look like an array, but it is not.
+    6. However, you cannot use array methods like valueOf(), pop(), push(), or join() on an HTMLCollection.
+
+17. Remaining topic - DOM NODEs ,DOM Collection ,Dom node list 
+    from hree " https://www.w3schools.com/js/js_htmldom_navigation.asp"
+
