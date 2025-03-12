@@ -39,6 +39,8 @@ const arr = Array.from(set)
 
 console.log(arr)
 
+console.log(Array.isArray(UniqArr) )//to check the its array or not because console.log(typeof arr) returns as object because arr is type of object 
+
 ```
 ### 3 = using for looop and index of 
 ```js
