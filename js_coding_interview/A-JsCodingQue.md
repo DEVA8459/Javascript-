@@ -168,6 +168,10 @@ const desending =(arr)=>{
 }
 
 console.log(desending(numbers1))
+//The -i in arr.length - 1 - i reduces unnecessary comparisons because after each pass, the largest unsorted element moves to its correct position.
+
+//This makes Bubble Sort more efficient! 🚀 ,its okay if we forget -i answer still going to be same
+
 ```
 ## 7. finding min and max value with inbuilt methode
 ```js
