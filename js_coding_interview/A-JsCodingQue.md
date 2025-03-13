@@ -354,6 +354,23 @@ if (!isNaN(number) && number > 1) {
     console.log("Please enter a valid number greater than 1.");
 }
 ```
+## easy prime finder 
+```js
+//use num/2 instead of math.sqrt
+const numbers = [2, 3, 4, 5, 10, 11, 15, 17, 20, 23, 29, 30, 35, 37, 40, 41, 43, 50];
+
+const isPrime =(num)=>{
+    if(num<2) return false
+    for(let i=2 ;i<=num/2 ;i++){
+        if(num%i === 0) return false
+    }
+    return true
+}
+console.log(isPrime(4))
+
+console.log(numbers.filter(isPrime))
+
+```
 
 ## if number is given 
 ```js
